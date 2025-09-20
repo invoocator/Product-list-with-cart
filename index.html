@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <LInk rel="stylesheet" href="estilo.css"></LInk>
+  <title>Frontend Mentor | Product list with cart</title>
+
+
+
+  <style>
+  </style>
+</head>
+
+<dialog class="dialogo">
+  <div class="superior">
+    <img src="images/icon-order-confirmed.svg" alt="">
+    <h3>Order Confirmed</h3>
+    <p>We hope you enjoy your food!</p>
+  </div>
+  <div class="compras comprasDialog">
+
+    <div class="prductosTotales prductosTotalesDialog ">
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Waffle With Barries</p>
+        <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-waffle-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>6.50</span></p>
+          <p class="totalPrecioDialog">$ <span class="totalPrecio ">6.5</span> </p>
+        </div>
+      </div>
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Vanilla bean Créme Brulé</p>
+        <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-creme-brulee-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>7.00</span></p>
+          <p>$ <span class="totalPrecio">7</span> </p>
+        </div>
+      </div>
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Macarron Mix of Five</p>
+         <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-macaron-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>8</span></p>
+          <p>$ <span class="totalPrecio">8</span> </p>
+        </div>
+      </div>
+     <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Classic Tiramisu</p>
+        <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-tiramisu-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>5.5</span></p>
+          <p>$ <span class="totalPrecio">5.5</span> </p>
+        </div>
+      </div>
+     <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Pistachio Baklava</p>
+        <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-baklava-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>4</span></p>
+          <p>$ <span class="totalPrecio">4</span> </p>
+        </div>
+      </div>
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Lemon Meringue Pie</p>
+         <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-meringue-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>5</span></p>
+          <p>$ <span class="totalPrecio">5</span> </p>
+        </div>
+      </div>
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Red Velvet Cake</p>
+        <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-cake-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>4.5</span></p>
+          <p>$ <span class="totalPrecio">4.5</span> </p>
+        </div>
+      </div>
+      <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Salted Caramel Brownie</p>
+         <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-brownie-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>5.5</span></p>
+          <p>$ <span class="totalPrecio">5.5</span> </p>
+        </div>
+      </div>
+     <div class="productosCesta productosCestaDialog oculto">
+        <p class="algo">Vanilla Panna Cota</p>
+         <div class="productoCestaAtributos productoCestaAtributosDialog ">
+          <img src="images/image-panna-cotta-desktop.jpg" alt="" class="pequeñito">
+          <p><span class="cantidad">1</span>x</p>
+          <p>$ <span>6.5</span></p>
+          <p>$ <span class="totalPrecio">6.5</span> </p>
+        </div>
+      </div>
+    </div>
+    <div class="precioTotalFinal">
+      <p>Order Ttoal</p>
+      <div>
+      <p>$ <span class="pagar"></span> </p>
+      </div>
+    </div>
+
+    <button class="final" onclick="reinicio()">Start New Order</button>
+
+</dialog>
+
+<body>
+
+  <h2>Dessert</h2>
+  <div class="total">
+    <div class="cartas">
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-waffle-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Waffle With Barries">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Waflle</p>
+          <p class="pDos">Waffle With Barries</p>
+          <p class="pTres">$6.50</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-creme-brulee-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Vanilla bean Créme Brulé">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Creme Brulle</p>
+          <p class="pDos">Vanilla bean Créme Brulé</p>
+          <p class="pTres">$7.00</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-macaron-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Macarron Mix of Five">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Macarron</p>
+          <p class="pDos">Macarron Mix of Five</p>
+          <p class="pTres">$8.00</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-tiramisu-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Classic Tiramisu">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Tiramisu</p>
+          <p class="pDos">Classic Tiramisu</p>
+          <p class="pTres">$5.50</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-baklava-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Pistachio Baklava">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Baklava</p>
+          <p class="pDos">Pistachio Baklava</p>
+          <p class="pTres">$4.00</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-meringue-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Lemon Meringue Pie">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Pie</p>
+          <p class="pDos">Lemon Meringue Pie</p>
+          <p class="pTres">$5.00</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-cake-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Red Velvet Cake">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Cake</p>
+          <p class="pDos">Red Velvet Cake</p>
+          <p class="pTres">$4.50</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-brownie-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Salted Caramel Brownie">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Browne</p>
+          <p class="pDos">Salted Caramel Brownie</p>
+          <p class="pTres">$5.50</p>
+        </div>
+      </div>
+      <div class="cartasinterior">
+        <div class="articulos">
+          <img src="images/image-panna-cotta-desktop.jpg" alt="">
+        </div>
+        <div class="botonera" onclick="pulsame(this)">
+          <img src="images/icon-add-to-cart.svg" alt="">
+          <p>Add to cart</p>
+          <input type="hidden" name="" value="Vanilla Panna Cota">
+        </div>
+        <div class="botones oculto">
+          <img src="images/icon-decrement-quantity.svg" alt="" class="botonredondo botonredondoUno"
+            onclick="resta(this)">
+          <p class="numeros">1</p>
+          <img src="images/icon-increment-quantity.svg" alt="" class="botonredondo" onclick="suma(this)">
+        </div>
+        <div class="atributos">
+          <p class="pUno">Panna Cota</p>
+          <p class="pDos">Vanilla Panna Cota</p>
+          <p class="pTres">$6.50</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="compras">
+
+
+      <div class="cuentaProducto">
+        <p>Yuor Cart( <span class="añadido">0</span> )</p>
+      </div>
+      <div class="prductosTotales">
+        <div class="productosCesta oculto">
+          <p>Waffle With Barries</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-waffle-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>6.50</span></p>
+            <p>$ <span class="totalPrecio">6.5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Vanilla bean Créme Brulé</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-creme-brulee-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>7.00</span></p>
+            <p>$ <span class="totalPrecio">7</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Macarron Mix of Five</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-macaron-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>8</span></p>
+            <p>$ <span class="totalPrecio">8</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Classic Tiramisu</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-tiramisu-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>5.5</span></p>
+            <p>$ <span class="totalPrecio">5.5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Pistachio Baklava</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-baklava-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>4</span></p>
+            <p>$ <span class="totalPrecio">4</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Lemon Meringue Pie</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-meringue-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>5</span></p>
+            <p>$ <span class="totalPrecio">5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Red Velvet Cake</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-cake-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>4.5</span></p>
+            <p>$ <span class="totalPrecio">4.5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Salted Caramel Brownie</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-brownie-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>5.5</span></p>
+            <p>$ <span class="totalPrecio">5.5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+        <div class="productosCesta oculto">
+          <p>Vanilla Panna Cota</p>
+          <div class="productoCestaAtributos">
+            <img src="images/image-panna-cotta-desktop.jpg" alt="" class="pequeñito oculto2">
+            <p><span class="cantidad">1</span>x</p>
+            <p>$ <span>6.5</span></p>
+            <p>$ <span class="totalPrecio">6.5</span> </p>
+            <img src="images/icon-remove-item.svg" alt="" class="quitar" onclick="borrar(this)">
+          </div>
+        </div>
+      </div>
+
+      <div class="preicoTotal">
+        <div class="preciostotales">
+          <p>Order Total</p>
+          <p>$ <span class="totalPagar"></span> </p>
+        </div>
+        <div class="imgenmasp">
+          <img src="images/icon-carbon-neutral.svg" alt="">
+          <p>this is a <strong>carbon-neutral</strong> delivery</p>
+        </div>
+        <div class="botonAceptar">
+          <button onclick="pagare()">Confirm Order</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+
+
+    <script src="codigo.js"></script>
+</body>
+
+</html>
