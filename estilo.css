@@ -2,10 +2,13 @@
       display: flex;
       flex-wrap: wrap;
 
+
     }
-    @media (max-width: 768px){
+    @media (max-width: 5000px){
       .total{
-        width: 50%;
+        margin: auto;
+        width: 70%;
+ 
       }
     }
 
@@ -24,17 +27,9 @@
       width: 60%;
     
     }
-      @media (max-width: 375px){
-      .total{
-        width: 20%;
-      }
-    }
 
-     @media (max-width: 1000px){
-      .total{
-        width: 50%;
-      }
-    }
+  
+
 
 
 
