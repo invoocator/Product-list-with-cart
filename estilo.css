@@ -1,251 +1,313 @@
    .total {
-      display: flex;
-      flex-wrap: wrap;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     width: 100%;
+   }
+
+   @media (max-width: 1000px) {
+     .total {
+       width: 400px;
+     }
+   }
+
+   h2 {
+     text-align: center;
+     font-size: 3vw;
+   }
+
+   p {
+     font-size: 0.8vw;
+   }
+
+   .cartas {
+     display: flex;
+     flex-wrap: wrap;
+     margin-left: 10%;
+     width: 60%;
+   }
+
+   @media (max-width: 1000px) {
+     .cartas {
+       width: 100%;
+     }
+   }
+
+   .cartasinterior {
+     width: 33%;
+     padding-bottom: 20px;
+   }
+
+   @media (max-width: 1000px) {
+     .cartasinterior {
+       width: 100%;
+     }
+   }
 
 
-    }
-    @media (max-width: 5000px){
-      .total{
-        margin: auto;
-        width: 70%;
- 
-      }
-    }
+   .articulos {
+     width: 90%;
+   }
 
-    h2 {
-      margin-left: 10%;
-      font-size: 3vw;
-    }
-    p{
-      font-size: 0.8vw;
-    }
+   .articulos>img {
+     width: 100%;
+     border-radius: 15px;
+   }
 
-    .cartas {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: 10%;
-      width: 60%;
-    
-    }
+   .botonera {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     top: -1.5vw;
+     left: 3.5vw;
+     width: 50%;
+     border-radius: 50px;
+     border: 1px solid #000;
+     background-color: white;
+     cursor: pointer;
+   }
 
-  
-
-
-
-
-    .cartasinterior {
-      width: 300px;
-      padding-bottom: 20px;
-
-    }
-
-    .articulos {
-      width: 90%;
-    }
-
-    .articulos>img {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .botonera {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: -1.5vw;
-      left: 3.5vw;
-      width: 50%;
-      border-radius: 50px;
-      border: 1px solid #000;
-      background-color: white;
-      cursor: pointer;
-    }
-
-    .botonera>p {
-      margin-left: 0.5vw;
-      padding-left: 20px;
-      padding-right: 30px;
-    }
-
-    .botones {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: -1.5vw;
-      left: 3.5vw;
-      width: 50%;
-      border-radius: 50px;
-
-      background-color: white;
-      cursor: pointer;
-      background-color: red;
-    }
-
-    .botones>p {
-      margin-left: 0.5vw;
-      padding-left: 20px;
-      padding-right: 30px;
-    }
-
-    .botonredondo {
-      padding: 5px;
-      width: 10%;
-      border: 1px solid white;
-      border-radius: 50px;
-    }
-
-    .botonredondoUno {
-      width: 8%;
-      height: 0.8vw;
-    }
-
-    .oculto {
-      display: none;
-    }
+   @media (max-width: 1000px) {
+     .botonera {
+       width: 80%;
+       top: -3vw;
+       height: 30px;
+     }
+   }
 
 
-    .atributos>p {
+   .botonera>p {
+     margin-left: 0.5vw;
+     padding-left: 20px;
+     padding-right: 30px;
+   }
 
-      width: 60%;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
+   @media (max-width: 1000px) {
+     .botonera>p {
+       font-size: 18px;
+     }
+   }
 
-    .pUno {
-      font-size: 0.6vw;
-    }
+   .botones {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     top: -1.5vw;
+     left: 3.5vw;
+     width: 50%;
+     border-radius: 50px;
+     background-color: white;
+     cursor: pointer;
+     background-color: red;
+   }
 
-    .pDos {
-      font-size: 0.9vw;
-    }
+   @media (max-width: 1000px) {
+     .botones {
+      top: -3vw;
+       left: 20vw;
+     }
+   }
 
-    .pTres {
-      color: red;
-    }
+   .botones>p {
+     margin-left: 0.5vw;
+     padding-left: 20px;
+     padding-right: 30px;
+   }
 
-    .compras {
-      width: 300px;
+   @media (max-width: 1000px) {
+     .botones>img {
+       width: 10px;
+     }
+   }
 
-    }
+   .botonredondo {
+     padding: 5px;
+     width: 10%;
+     border: 1px solid white;
+     border-radius: 50px;
+   }
 
-    .prductosTotales {
+   .botonredondoUno {
+     width: 8%;
+     height: 0.8vw;
+   }
 
-      width: 100%;
-    }
+   .oculto {
+     display: none;
+   }
 
-    .productosCesta>p {
-      margin-bottom: 0px;
-    }
 
-    .productoCestaAtributos {
-      display: flex;
-      justify-content: start;
-      width: 100%;
+   .atributos>p {
+     width: 60%;
+     margin-top: 0px;
+     margin-bottom: 0px;
+   }
+     @media (max-width: 1000px) {
+     .atributos>p {
+      font-size: 18px;
+     }
+   }
 
-    }
+   .pUno {
+     font-size: 0.6vw;
+   }
 
-    .productoCestaAtributos>p {
-      margin-right: 5%;
-      margin-top: 0px;
+   .pDos {
+     font-size: 0.9vw;
+   }
 
-    }
+   .pTres {
+     color: red;
+   }
 
-    .pequeñito {
-      width: 5%;
-    }
+   .compras {
+     width: 300px;
+   }
 
-    .oculto2 {
-      display: none;
-    }
+   .compras>div>p {
+     font-size: 40px;
+   }
 
-    .quitar {
+   .prductosTotales {
+     width: 100%;
+   }
 
-      position: relative;
-      border: 1px solid #000;
-      width: 15px;
-      height: 15px;
-      cursor: pointer;
-      border-radius: 5000px;
-      bottom: 0.7vw;
-      left: 6vw;
-    }
 
-    .preciostotales {
-      display: flex;
-      justify-content: space-between;
-    }
+   .productosCesta>p {
+     font-size: 25px;
+     margin-bottom: 0px;
+   }
 
-    .imgenmasp {
-      display: flex;
-      justify-content: center;
-    }
+   .productoCestaAtributos {
+     display: flex;
+     justify-content: start;
+     width: 100%;
 
-    .botonAceptar {
-      display: flex;
-      justify-content: center;
-      padding: 5%;
+   }
 
-    }
+   .productoCestaAtributos>p {
+     margin-right: 5%;
+     margin-top: 0px;
 
-    .botonAceptar>button {
-      border-radius: 20px;
-      padding: 5%;
-      width: 100%;
-    }
-    .dialogo{
-      width: 13%;
-    }
-    .superior > h3{
-      font-size: 1.5vw;
-      margin-bottom: 0px;
-    }
-    .superior > p{
-      margin-top: 0px;
-    }
-    .prductosTotalesDialog{
-      width: 100%;
-     
-    }
-    .algo{
-      position: relative;
-      left: 22%;
-      top: 0.5vw;
-      
-    }
-  
-   
-    .productoCestaAtributosDialog > img{
-      position: relative;
-      left: 7%;
-      width: 14%;
-      bottom: 0.5vw;
-    }
-    .comprasDialog{
-      width: 100%;
-      
-    }
-    .productoCestaAtributosDialog > p{
-      position: relative;
-      left: 10%;
-      top: 0.6vw;
- 
-    }
-    .precioTotalFinal{
-      display: flex;
-      justify-content: start;
-    }
-    .precioTotalFinal > div{
-      width: 50%;
-      text-align: center;
-      padding-left: 2vw;
-    }
-    
-    .final{
-      width: 100%;
-      border-radius: 15px;
-      padding: 3%;
-      background-color: red;
-      color: white;
-    }
+   }
+
+   .pequeñito {
+     width: 5%;
+   }
+
+   .oculto2 {
+     display: none;
+   }
+
+   .quitar {
+     position: relative;
+     border: 1px solid #000;
+     width: 15px;
+     height: 15px;
+     cursor: pointer;
+     border-radius: 5000px;
+     bottom: 0.7vw;
+     left: 6vw;
+   }
+
+   .preciostotales {
+     display: flex;
+     justify-content: space-between;
+   }
+
+   .imgenmasp {
+     display: flex;
+     justify-content: center;
+   }
+
+   .botonAceptar {
+     display: flex;
+     justify-content: center;
+     padding: 5%;
+   }
+
+   .botonAceptar>button {
+     border-radius: 20px;
+     padding: 5%;
+     width: 100%;
+     font-size: 22px;
+     cursor: pointer;
+   }
+
+   .dialogo {
+     width: 30%;
+   }
+     @media (max-width: 1000px) {
+     .dialogo {
+    width: 80%;
+     }
+   }
+
+
+
+   .superior>h3 {
+     font-size: 2vw;
+     margin-bottom: 0px;
+   }
+
+   .superior>p {
+     font-size: 22px;
+     margin-top: 0px;
+   }
+
+   .prductosTotalesDialog {
+     width: 100%;
+   }
+
+   .algo {
+     position: relative;
+     left: 22%;
+     top: 0.5vw;
+
+   }
+
+   .productoCestaAtributosDialog>img {
+     position: relative;
+     left: 7%;
+     width: 14%;
+     bottom: 0.5vw;
+   }
+
+   .comprasDialog {
+     width: 100%;
+
+   }
+
+   .productoCestaAtributosDialog>p {
+     position: relative;
+     left: 10%;
+     top: 0.6vw;
+     font-size: 22px;
+   }
+
+   .precioTotalFinal {
+     display: flex;
+     justify-content: start;
+     align-items: center;
+   }
+
+   .precioTotalFinal>div {
+     width: 50%;
+     text-align: center;
+     padding-left: 2vw;
+   }
+
+   .precioTotalFinal>div>p {
+     font-size: 40px;
+   }
+
+   .final {
+     width: 100%;
+     border-radius: 15px;
+     padding: 3%;
+     background-color: red;
+     color: white;
+     font-size: 30px;
+   }
