@@ -105,7 +105,7 @@
 
    @media (max-width: 1000px) {
      .botones {
-      top: -3vw;
+       top: -3vw;
        left: 20vw;
      }
    }
@@ -144,9 +144,10 @@
      margin-top: 0px;
      margin-bottom: 0px;
    }
-     @media (max-width: 1000px) {
+
+   @media (max-width: 1000px) {
      .atributos>p {
-      font-size: 18px;
+       font-size: 18px;
      }
    }
 
@@ -217,6 +218,12 @@
      justify-content: space-between;
    }
 
+   @media (max-width: 1000px) {
+     .preciostotales > p {
+      font-size: 16px;
+     }
+   }
+
    .imgenmasp {
      display: flex;
      justify-content: center;
@@ -239,9 +246,10 @@
    .dialogo {
      width: 30%;
    }
-     @media (max-width: 1000px) {
+
+   @media (max-width: 1000px) {
      .dialogo {
-    width: 80%;
+       width: 80%;
      }
    }
 
